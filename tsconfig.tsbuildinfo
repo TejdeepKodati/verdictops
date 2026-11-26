@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/types.ts","./src/components/addcasemodal.tsx","./src/components/caseinspector.tsx","./src/components/colophon.tsx","./src/components/diffmatrix.tsx","./src/components/ledgerstrip.tsx","./src/components/runsweepmodal.tsx","./src/components/sidebar.tsx"],"version":"5.9.3"}

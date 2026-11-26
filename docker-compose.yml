@@ -1,0 +1,19 @@
+services:
+  verdictops:
+    build: .
+    container_name: verdictops-harness
+    ports:
+      - "8000:8000"
+    environment:
+      - VERDICT_DB_PATH=/app/data/verdictops.db
+    volumes:
+      - verdictops_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  verdictops_data:
